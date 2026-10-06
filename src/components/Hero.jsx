@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CheckCircle2, ShieldCheck, Wrench, Mouse } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, ShieldCheck, Wrench } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[90vh] lg:min-h-screen flex flex-col justify-center bg-[#050B14] overflow-hidden -mt-[88px] pt-[88px]">
       {/* Cinematic Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-[url('/images/premium-hero-bg.png')] bg-cover bg-center lg:bg-right opacity-90 mix-blend-lighten"></div>
+        <div className="w-full h-full bg-[url('/images/premium-hero-bg.png')] bg-cover bg-[position:65%_center] lg:bg-right opacity-90 mix-blend-lighten"></div>
       </div>
       
       {/* Dark gradient vignette for readability */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#050B14] via-[#050B14]/80 to-transparent lg:w-[70%]"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#050B14] via-[#050B14]/90 to-transparent lg:w-[70%]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full pt-12 pb-24 flex-grow flex flex-col justify-center">
         
@@ -22,14 +22,14 @@ export default function Hero() {
             {/* Top Label */}
             <div className="inline-flex items-center gap-2 mb-6 animate-fade-in-up">
               <span className="w-2 h-2 rounded-full bg-orange-500"></span>
-              <span className="text-xs font-bold tracking-[0.2em] text-steel-300 uppercase">
+              <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-steel-300 uppercase">
                 INDUSTRIAL VALVES & FLOW CONTROL
               </span>
             </div>
             
             {/* Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-white tracking-tight leading-[1.05] mb-8 animate-fade-in-up" style={{animationDelay: '100ms'}}>
-              Engineered Flow<br className="hidden md:block" /> Control. <br className="hidden md:block" />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-white tracking-tight leading-[1.05] mb-8 animate-fade-in-up" style={{animationDelay: '100ms'}}>
+              Engineered Flow<br className="hidden sm:block" /> Control. <br className="hidden md:block" />
               <span className="relative inline-block mt-2">
                 Built for Reliability.
                 <span className="absolute bottom-1 lg:bottom-3 left-0 w-full h-2 bg-orange-500/80 -z-10"></span>
@@ -42,17 +42,17 @@ export default function Hero() {
             </p>
             
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-5 mb-16 animate-fade-in-up" style={{animationDelay: '300ms'}}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mb-12 sm:mb-16 animate-fade-in-up w-full sm:w-auto" style={{animationDelay: '300ms'}}>
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-400 text-navy-950 px-8 py-4 rounded font-bold tracking-wide transition-all duration-300 shadow-[0_4px_20px_rgba(249,115,22,0.3)] hover:shadow-[0_4px_25px_rgba(249,115,22,0.5)] group hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-orange-500 hover:bg-orange-400 text-navy-950 px-8 py-4 rounded font-bold tracking-wide transition-all duration-300 shadow-[0_4px_20px_rgba(249,115,22,0.3)] hover:shadow-[0_4px_25px_rgba(249,115,22,0.5)] group hover:-translate-y-0.5"
               >
                 Explore Products
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/request-quote"
-                className="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/20 text-white px-8 py-4 rounded font-bold tracking-wide transition-all duration-300 hover:border-orange-500/50 backdrop-blur-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/20 text-white px-8 py-4 rounded font-bold tracking-wide transition-all duration-300 hover:border-orange-500/50 backdrop-blur-sm"
               >
                 Request a Quote
                 <ArrowUpRight className="ml-2 w-4 h-4 opacity-70" />
@@ -90,8 +90,8 @@ export default function Hero() {
           </div>
           
           {/* RIGHT: Technical Badge (Valve is in the background image) */}
-          <div className="w-full lg:w-2/5 flex justify-end items-end h-[300px] lg:h-[600px] relative z-20 mt-10 lg:mt-0 animate-fade-in-up" style={{animationDelay: '500ms'}}>
-             <div className="bg-[#0A1220]/80 backdrop-blur-md border border-white/10 p-5 rounded-lg shadow-2xl mb-10 mr-4 lg:mr-0 lg:mb-20">
+          <div className="w-full lg:w-2/5 flex justify-center sm:justify-end items-end h-auto lg:h-[600px] relative z-20 mt-12 lg:mt-0 animate-fade-in-up" style={{animationDelay: '500ms'}}>
+             <div className="bg-[#0A1220]/80 backdrop-blur-md border border-white/10 p-5 rounded-lg shadow-2xl mb-4 lg:mb-20">
                <div className="flex items-center gap-3 mb-1">
                  <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                  <span className="text-xs font-bold tracking-widest text-steel-300 uppercase">PRECISION ENGINEERED</span>
@@ -104,14 +104,7 @@ export default function Hero() {
 
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-fade-in-up" style={{animationDelay: '600ms'}}>
-        <span className="text-steel-400 text-[10px] font-bold tracking-widest uppercase">Scroll Down</span>
-        <div className="animate-bounce">
-          <Mouse className="w-5 h-5 text-orange-500" />
-        </div>
-      </div>
-      
+
     </section>
   );
 }

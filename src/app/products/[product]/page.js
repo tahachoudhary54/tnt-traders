@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowLeft, Download, FileText } from "lucide-react";
 
-export default function ProductDetailPage({ params }) {
-  // In a real app, you would fetch product details based on params.product
-  const productName = params.product.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+export default async function ProductDetailPage({ params }) {
+  const { product } = await params;
+  // In a real app, you would fetch product details based on product
+  const productName = product.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 
   return (
     <div className="bg-white">

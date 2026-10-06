@@ -41,7 +41,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-steel-300 hover:text-orange-500 transition-colors text-sm"
+                    className="inline-block text-steel-300 hover:text-orange-500 transition-all duration-300 hover:translate-x-1 text-sm"
                   >
                     {item.name}
                   </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-steel-300 hover:text-orange-500 transition-colors text-sm"
+                    className="inline-block text-steel-300 hover:text-orange-500 transition-all duration-300 hover:translate-x-1 text-sm"
                   >
                     {item.name}
                   </Link>
@@ -95,13 +95,13 @@ export default function Footer() {
           <div className="flex gap-6">
             <Link
               href="/privacy-policy"
-              className="text-steel-400 hover:text-white text-sm transition-colors"
+              className="relative text-steel-400 hover:text-white text-sm transition-all duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-steel-400 hover:text-white text-sm transition-colors"
+              className="relative text-steel-400 hover:text-white text-sm transition-all duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
             >
               Terms & Conditions
             </Link>
